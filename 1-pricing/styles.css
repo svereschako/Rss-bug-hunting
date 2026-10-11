@@ -78,6 +78,7 @@ body {
   list-style: none;
   margin-bottom: 24px;
   text-align: left;
+  min-height: 108px;
 }
 
 .features li {
