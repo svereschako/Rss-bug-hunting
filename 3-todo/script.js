@@ -84,8 +84,18 @@ filterButtons.forEach((btn) => {
     filterButtons.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     currentFilter = btn.dataset.filter;
-    render();
+    //render();
+    filter();
   });
 });
 
+function filter() {
+  const state = tasks.slice();  
+  if(currentFilter == "done")
+    tasks = state.filter((t) => t.done === true);
+  else if(currentFilter == "active")
+    tasks = state.filter((t) => t.done === false);   
+  render();
+  tasks = state.slice();
+}
 render();
