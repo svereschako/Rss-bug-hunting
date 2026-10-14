@@ -78,7 +78,7 @@ function renderCart() {
   cartItemsEl.innerHTML = "";
   let total = "";
   cart.forEach((item) => {
-    const lineTotal = item.price;
+    const lineTotal = item.qty > 1 ? item.price*item.qty : item.price;
     const li = document.createElement("li");
     li.className = "cart-item";
     li.innerHTML = `<span>${item.name}</span>
