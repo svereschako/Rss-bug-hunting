@@ -102,6 +102,8 @@ function renderCart() {
   badgeEl.textContent = cart.reduce((accum, current) => accum + current.qty, init);
   totalEl.textContent = total;
   emptyMsg.hidden = true;
+  if(cart.length == 0)
+    emptyMsg.hidden = false;
 }
 
 promoBtn.addEventListener("click", applyPromo);
