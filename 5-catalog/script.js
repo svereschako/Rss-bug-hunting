@@ -49,7 +49,7 @@ function render() {
   });
   countEl.textContent = products.length;
 }
-
+render();
 searchInput.addEventListener("input", render);
 categorySelect.addEventListener("change", render);
 sortSelect.addEventListener("change", render);
